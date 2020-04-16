@@ -1,0 +1,16 @@
+- name: Deployer le theme fluxbb
+  become: true
+  hosts: testing   
+
+  tasks:
+
+   - name: Exporter les fichiers
+     copy:
+       src: "{{ item }}"
+       dest: "{{ fluxbb_home }}"
+       owner: www-data
+       group: www-data
+     with_items:
+        - "{{ playbook_dir }}/../_fluxbb/favicon.ico"
+        - "{{ playbook_dir }}/../_fluxbb/style"
+        - "{{ playbook_dir }}/../_fluxbb/include"
