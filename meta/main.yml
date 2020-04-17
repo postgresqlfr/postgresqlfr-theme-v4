@@ -1,0 +1,6 @@
+galaxy_info:
+  role_name: postgresqlfr-theme-v4
+  author: Damien Clochard
+  description: Common Bootstrap Theme for the postgresql.fr platform
+  company: POSTGRESQL.FR
+  license: BSD
