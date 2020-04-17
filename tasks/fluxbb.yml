@@ -1,9 +1,9 @@
 - name: Deployer le theme fluxbb
   copy:
     src: "{{ item }}"
-     dest: "{{ fluxbb_home }}"
-     owner: www-data
-     group: www-data
+    dest: "{{ fluxbb_home }}"
+    owner: www-data
+    group: www-data
    with_items:
      - "favicon.ico"
      - "style"
