@@ -4,7 +4,7 @@
     dest: "{{ fluxbb_home }}"
     owner: www-data
     group: www-data
-   with_items:
-     - "favicon.ico"
-     - "style"
-     - "include"
+  with_items:
+     - "fluxbb/favicon.ico"
+     - "fluxbb/style"
+     - "fluxbb/include"

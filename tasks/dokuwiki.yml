@@ -1,0 +1,13 @@
+- name: Deployer le theme
+  copy:
+    src: "dokuwiki/lib/tpl/tortoise"
+    dest: "{{ dokuwiki_home }}/lib/tpl/"
+    owner: www-data
+    group: www-data
+
+- name: Activer la configuration
+  blockinfile:
+    block: "{{ lookup('file', 'dokuwiki/conf/local.php.inc') }}"
+    dest: "{{ dokuwiki_home }}/conf/local.php"
+    backup: yes
+    #validate: FIXME
