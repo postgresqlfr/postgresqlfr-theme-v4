@@ -1,9 +1,36 @@
 
-dokuwiki_domain_name: testwww.postgresql.fr
-dokuwiki_home: /var/www/{{ dokuwiki_domain_name }}
+##
+## 1- blog
+##
 
+# TODO
+
+##
+## 2- doc
+##
+pgdocs_fr_domain_name: testdoc.postgresql.fr
+pgdocs_fr_home: /var/www/{{ pgdocs_fr_domain_name }}
+
+##
+## 3- erp
+##
+
+# Nothing to do :)
+
+##
+## 4- forum
+##
 fluxbb_domain_name: testforum.postgresql.fr
 fluxbb_home: /var/www/{{ fluxbb_domain_name }}
 
+##
+## 5- planete
+##
 planetplanet_domain_name: testplanete.postgresql.fr
 planetplanet_home: /var/www/{{ planetplanet_domain_name }}
+
+##
+## 6- www
+##
+dokuwiki_domain_name: testwww.postgresql.fr
+dokuwiki_home: /var/www/{{ dokuwiki_domain_name }}
