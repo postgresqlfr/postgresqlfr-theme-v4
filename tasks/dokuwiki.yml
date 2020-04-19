@@ -1,11 +1,11 @@
-- name: Deployer le theme
+- name: Deployer le theme dokuwiki
   copy:
     src: "dokuwiki/lib/tpl/tortoise"
     dest: "{{ dokuwiki_home }}/lib/tpl/"
     owner: www-data
     group: www-data
 
-- name: Activer la configuration
+- name: Activer la configuration du theme dokuwiki
   blockinfile:
     block: "{{ lookup('file', 'dokuwiki/conf/local.php.inc') }}"
     dest: "{{ dokuwiki_home }}/conf/local.php"

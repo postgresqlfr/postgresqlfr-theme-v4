@@ -1,2 +1,6 @@
 
-fluxbb_home: /var/www/testforum.postgresql.fr 
+dokuwiki_domain_name: testwww.postgresql.fr
+dokuwiki_home: /var/www/{{ dokuwiki_domain_name }}
+
+fluxbb_domain_name: testforum.postgresql.fr
+fluxbb_home: /var/www/{{ fluxbb_domain_name }}
