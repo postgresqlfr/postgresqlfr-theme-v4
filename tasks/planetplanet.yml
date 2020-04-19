@@ -1,0 +1,14 @@
+
+- name: Deployer le theme planetplanet
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ planetplanet_home }}/{{ item.dst }}"
+    owner: www-data
+    group: www-data
+  with_items:
+     - src: "planetplanet/theme"
+       dst: "theme"
+     - src: planetplanet/favicon.ico
+       dst: favicon.ico
+     - src: planetplanet/pgfr/index.html.tmpl
+       dst: pgfr/

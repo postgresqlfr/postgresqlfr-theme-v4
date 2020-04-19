@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title><TMPL_VAR name></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
+
+<link rel="stylesheet" href="planet.css" type="text/css">
+
+  <style type="text/css" media="screen">
+  @import url(/theme/style.css);
+  </style>
+
+<TMPL_IF feedtype>
+<link rel="alternate" href="<TMPL_VAR feed ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">" type="application/<TMPL_VAR feedtype>+xml">
+</TMPL_IF>
+</head>
+
+<body>
+<div id="top">
+  <div id="pgHeader">
+    <span id="pgHeaderLogoLeft">
+      <a href="/" title="PostgreSQL"><img src="/theme/img/hdr_left.png" width="230" height="80" alt="PostgreSQL" /></a>
+    </span>
+    <span id="pgHeaderLogoRight">
+      <a href="/" title="La base de donnees la plus sophistiquee au monde."><img src="/theme/img/hdr_right.png" width="210" height="80" alt="La base de donnees la plus sophistiquee au monde." /></a>
+    </span>
+
+  </div>
+</div>
+
+<div class="pgTopNav">
+  <div class="pgTopNavLeft"> 
+    <img src="/theme/img/nav_lft.png" width="7" height="23" alt="" />
+  </div>
+  <div class="pgTopNavRight">
+    <img src="/theme/img/nav_rgt.png" width="7" height="23" alt="" />
+  </div>
+  <ul class="pgTopNavList">
+    <li><a href="https://www.postgresql.fr/" title="Accueil">Accueil</a></li>
+    <li><a href="https://blog.postgresql.fr/" title="Lire les actualités">Actualités</a></li>
+    <li><a href="https://docs.postgresql.fr/" title="Lire la documentation officielle">Documentation</a></li>
+    <li><a href="https://forums.postgresql.fr/" title="Pour poser des questions">Forums</a></li>
+    <li><a href="https://www.postgresql.fr/asso/" title="La vie de l'association">Association</a></li>
+    <li><a href="https://www.postgresql.fr/entreprises/" title="Groupe de Travail PostgreSQL Entreprises">Entreprises</a></li>
+    <li><a href="https://www.postgresql.fr/devel:accueil" title="Informations pour les développeurs/traducteurs">Développeurs</a></li>
+    <li><a href="https://planete.postgresql.fr" title="La planète francophone sur PostgreSQL">Planète</a></li>
+    <li><a href="https://www.postgresql.fr/support/" title="Support sur PostgreSQL">Support</a></li>
+  </ul>
+
+</div>
+<div id="wrapper">
+
+<div id="pgContent">
+  <div id="contenu">
+
+<h1><TMPL_VAR name></h1>
+
+<TMPL_LOOP Items>
+<TMPL_IF new_date>
+<TMPL_UNLESS __FIRST__>
+### End <div class="channelgroup">
+</div>
+### End <div class="daygroup">
+</div>
+</TMPL_UNLESS>
+<div class="daygroup">
+<h2><TMPL_VAR new_date></h2>
+</TMPL_IF>
+
+<TMPL_IF new_channel>
+<TMPL_UNLESS new_date>
+### End <div class="channelgroup">
+</div>
+</TMPL_UNLESS>
+<div class="channelgroup">
+
+### Planet provides template variables for *all* configuration options for
+### the channel (and defaults), even if it doesn't know about them.  We
+### exploit this here to add hackergotchi faces to our channels.  Planet
+### doesn't know about the "face", "facewidth" and "faceheight" configuration
+### variables, but makes them available to us anyway.
+
+<h3><a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">"><TMPL_VAR channel_name></a></h3>
+<TMPL_IF channel_face>
+<img class="face" src="images/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="">
+</TMPL_IF>
+</TMPL_IF>
+
+
+<div class="entrygroup" id="<TMPL_VAR id>"<TMPL_IF channel_language> lang="<TMPL_VAR channel_language>"</TMPL_IF>>
+<TMPL_IF title>
+<h4<TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF>><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
+</TMPL_IF>
+<div class="entry">
+<div class="content"<TMPL_IF content_language> lang="<TMPL_VAR content_language>"</TMPL_IF>>
+<TMPL_VAR content>
+</div>
+
+### Planet also makes available all of the information from the feed
+### that it can.  Use the 'planet-cache' tool on the cache file for
+### a particular feed to find out what additional keys it supports.
+### Comment extra fields are 'author' and 'category' which we
+### demonstrate below.
+
+<p class="date">
+<a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_IF author>par <TMPL_VAR author> le </TMPL_IF><TMPL_VAR date><TMPL_IF category> dans <TMPL_VAR category></TMPL_IF></a>
+</p>
+</div>
+</div>
+
+<TMPL_IF __LAST__>
+### End <div class="channelgroup">
+</div>
+### End <div class="daygroup">
+</div>
+</TMPL_IF>
+</TMPL_LOOP>
+
+</div>
+### End <div class="contenu">
+
+<div class="sidebar">
+<img src="images/logo.png" alt="">
+
+<h2>Membres de la planète PGFR</h2>
+<ul>
+<TMPL_LOOP Channels>
+<li>
+<a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe">
+<img src="images/favicon.ico" alt="(feed)"></a> 
+<a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
+</li>
+</TMPL_LOOP>
+</ul>
+<p>
+<h2>S'abonner</h2>
+<ul>
+<li>
+<TMPL_IF feedtype>
+<a href="<TMPL_VAR feed ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">">Fil des billets</a>
+</TMPL_IF>
+</li>
+</ul>
+</p>
+
+<p>
+<h2>PostgreSQL en Français:</h2>
+<ul>
+<li><a href="http://www.postgresql.fr/">Association PostgreSQL Fr</a></li>
+<li><a href="http://asso.postgresql.fr/">Wiki de l'asso</a></li>
+<li><a href="https://doc.postgresql.fr/">Documentation en français</a></li>
+<li><a href="https://archives.postgresql.org/pgsql-fr-generale/">Liste de discussion principale</a></li>
+<li><a href="http://listes.postgresql.fr">Les autres listes</a></li>
+</ul>
+</p>
+
+<p>
+<strong>Dernière mise à jour:</strong><br>
+<TMPL_VAR date><br>
+<br/>
+<br/>
+Propulsé par:
+<a href="http://www.planetplanet.org/"><img src="images/planet.png" width="80" h
+eight="15" alt="Planet" border="0"></a>
+</p>
+
+</div><!-- end of sidebar -->
+</div><!-- end of pgContent -->
+</div><!-- end of pgWrap -->
+</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3921927-5");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</html>
