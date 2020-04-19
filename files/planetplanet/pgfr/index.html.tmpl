@@ -6,10 +6,7 @@
 <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
 
 <link rel="stylesheet" href="planet.css" type="text/css">
-
-  <style type="text/css" media="screen">
-  @import url(/theme/style.css);
-  </style>
+<link rel="stylesheet" href="theme/style.css" type="text/css">
 
 <TMPL_IF feedtype>
 <link rel="alternate" href="<TMPL_VAR feed ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">" type="application/<TMPL_VAR feedtype>+xml">
@@ -30,7 +27,7 @@
 </div>
 
 <div class="pgTopNav">
-  <div class="pgTopNavLeft"> 
+  <div class="pgTopNavLeft">
     <img src="/theme/img/nav_lft.png" width="7" height="23" alt="" />
   </div>
   <div class="pgTopNavRight">
@@ -128,7 +125,7 @@
 <TMPL_LOOP Channels>
 <li>
 <a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe">
-<img src="images/favicon.ico" alt="(feed)"></a> 
+<img src="images/favicon.ico" alt="(feed)"></a>
 <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
 </li>
 </TMPL_LOOP>
