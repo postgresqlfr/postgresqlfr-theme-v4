@@ -1,0 +1,56 @@
+<WRAP group>
+
+<WRAP third column>
+
+=== À propos ===
+
+PostgreSQL est un système de gestion de base de données (SGBD) open source. Developpé activement depuis plus de 30 ans, il a gagné une solide réputation de fiabilité, de puissance et de performances.
+
+La communauté des utilisatrices et utilisateurs du logiciel fournit une multitude d'information pour découvir, apprendre, échanger et contribuer.
+
+Le site officiel du projet est  \\
+
+**https://www.postgresql.org**
+
+</WRAP>
+<WRAP third column>
+
+=== Nous contacter ===
+
+[[contact@postgresql.fr|Questions Générales]] \\
+[[bureau@postgresql.fr|Bureau de l'association]] \\
+[[entreprises.contact@postgresql.fr|Groupe Inter-Entreprises]]
+
+\\
+
+=== Groupes Locaux ===
+
+[[https://www.meetup.com/fr-FR/PostgresBE/|Bruxelles]] -
+[[https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Geneve/|Genève]] -
+[[https://www.meetup.com/fr-FR/Meetup-PostgreSQL-Lille/|Lille]] -
+[[https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Lyon/|Lyon]]
+
+[[https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Nantes/|Nantes]] -
+[[https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Paris/|Paris]] -
+[[https://www.meetup.com/fr-FR/PostgreSQL-User-Group-Toulouse/|Toulouse]]
+
+</WRAP>
+
+<WRAP third column>
+=== Réseaux Sociaux ===
+
+{{fa>youtube-play}} [[https://www.youtube.com/channel/UCR7skKC85Zn6p7fJ-lW7G8g| Chaine Youtube]]
+
+{{fa>linkedin}} [[https://www.linkedin.com/grp/home?gid=8187772|Linkedin]]
+
+{{fa>twitter}} [[https://twitter.com/PostgreSQLFR|Twitter]]
+
+{{fa>github}} [[https://github.com/postgresqlfr|Github]]
+
+{{fa>envelope}} [[http://www.postgresql.org/list/pgsql-fr-generale/|liste de discussion]]
+
+</WRAP>
+
+
+
+</WRAP>

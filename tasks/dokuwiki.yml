@@ -1,7 +1,55 @@
-- name: Deployer le theme dokuwiki
+# V3
+#- name: Deployer le theme dokuwiki
+#  copy:
+#    src: "dokuwiki/lib/tpl/tortoise"
+#    dest: "{{ dokuwiki_home }}/lib/tpl/"
+#    owner: www-data
+#    group: www-data
+
+- name: Fetch the bootstrap3 template
+  become_user: www-data
+  git:
+    repo: "{{ dokuwiki_template_repo }}"
+    dest: "{{ dokuwiki_home }}/lib/tpl/{{ dokuwiki_template }}"
+    version: "{{ dokuwiki_template_version }}"
+    depth: 1 # shallow clone
+
+# TODO: installer les plugins: icon, bootswatch
+
+#- name: Install the navbar
+#  template:
+#    src: dokuwiki/data/pages/navbar.txt.j2
+#    dest: "{{ dokuwiki_home }}/data/pages/navbar.txt"
+#    owner: www-data
+#    group: www-data
+
+- name: Install the pages
   copy:
-    src: "dokuwiki/lib/tpl/tortoise"
-    dest: "{{ dokuwiki_home }}/lib/tpl/"
+    src: "dokuwiki/{{ item }}"
+    dest: "{{ dokuwiki_home }}/{{ item }}"
+    owner: www-data
+    group: www-data
+    mode: 0600  # FIXME repasser à 400 pour empêcher les gens de modifier la navigation :)
+  with_items:
+    - data/pages/navbar.txt
+    - data/pages/footer.txt
+    - data/pages/accueil.txt # FIXME: a supprimer après la migration
+
+- name: Install the media
+  copy:
+    src: "dokuwiki/{{ item }}"
+    dest: "{{ dokuwiki_home }}/{{ item }}"
+    owner: www-data
+    group: www-data
+    mode: 0600 # FIXME: repasser à 400 pour empêcher les gens de modifier le logo :)
+  with_items:
+    - data/media/favicon.ico
+    - data/media/logo.png
+
+- name: Activer la customisation CSS
+  copy:
+    src: dokuwiki/conf/userstyle.css
+    dest: "{{ dokuwiki_home }}/conf/"
     owner: www-data
     group: www-data
 
