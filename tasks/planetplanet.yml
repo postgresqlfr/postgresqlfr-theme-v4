@@ -1,10 +1,9 @@
 
 - name: Deployer le theme planetplanet
-  copy:
+  synchronize:
     src: "{{ item.src }}"
     dest: "{{ planetplanet_home }}/{{ item.dst }}"
-    owner: www-data
-    group: www-data
+    rsync_opts: "--chown=www-data:"
   with_items:
      - src: "planetplanet/theme"
        dst: "theme"
@@ -12,3 +11,5 @@
        dst: favicon.ico
      - src: planetplanet/pgfr/index.html.tmpl
        dst: pgfr/
+     - src: planetplanet/theme
+       dst: /
