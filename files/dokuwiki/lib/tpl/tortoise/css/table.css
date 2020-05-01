@@ -7,7 +7,7 @@ div.tblBasic h2 {
 }
 
 div.tblBasic table {
-        background: #F5F5F5 url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_top_lft.png) top left no-repeat;
+/*        background: #F5F5F5 url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_top_lft.png) top left no-repeat;*/
         margin-bottom: 15px;
 }
 
@@ -30,22 +30,6 @@ div.tblBasic table td {
 div.tblBasic table tr.lastrow td {
         border-bottom: none;
         padding-bottom: 13px;
-}
-
-div.tblBasic table tr.lastrow td.colFirst {
-        background: url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_btm_lft.png) bottom left no-repeat;
-}
-
-div.tblBasic table.tblBasicGrey th.colLast {
-        background: #F5F5F5 url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_top_rgt.png) top right no-repeat;
-}
-
-div.tblBasic table.tblBasicGrey tr.lastrow td.colLast {
-        background: #F5F5F5 url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_btm_rgt.png) bottom right no-repeat;
-}
-
-div.tblBasic table.tblBasicGrey tr.firstrow td.colLast {
-        background: #F5F5F5 url(https://blog.postgresql.fr/themes/postgresql/img/nav_tbl_top_rgt.png) top right no-repeat;
 }
 
 div.tblBasic table th.colMid,
