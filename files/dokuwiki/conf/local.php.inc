@@ -3,6 +3,7 @@ $conf['title'] = 'PostgreSQL.fr';
 $conf['tagline'] = 'La communauté francophone de PostgreSQL, la base de données open source de référence';
 $conf['breadcrumbs'] = 0;
 $conf['youarehere'] = 0;
+$conf['defer_js'] = 0;
 
 # Config du template
 $conf['template'] = 'bootstrap3';
