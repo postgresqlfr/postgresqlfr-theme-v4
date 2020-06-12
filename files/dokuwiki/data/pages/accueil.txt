@@ -10,18 +10,20 @@
 <WRAP download>
 <lead>Téléchargement & Documentation </lead>
 
-  * **{{fa>download}} [[https://www.postgresql.org/download/|PostgreSQL 11.2]]** . [[http://www.postgresql.org/docs/11/|Documentation]] 
+  * **{{fa>download}} [[https://www.postgresql.org/download/|PostgreSQL 11.2]]** . [[http://www.postgresql.org/docs/11/|Documentation]]
   * [[https://www.postgresql.org/download/|PostgreSQL 10.7]] . [[http://www.postgresql.org/docs/10/|Documentation]]
   * [[https://www.postgresql.org/download/|PostgreSQL 9.6.12]] . [[http://www.postgresql.org/docs/9.6/|Documentation]]
   * [[https://www.postgresql.org/download/|PostgreSQL 9.5.16]] . [[http://www.postgresql.org/docs/9.5/|Documentation]]
   * [[https://www.postgresql.org/download/|PostgreSQL 9.4.21]] . [[http://docs.postgresql.fr/9.4/|Documentation]]
+
+-> [[https://www.postgresql.org/developer/beta/|PostgreSQL 13 Bêta est disponible !]]
 </WRAP>
 
 <WRAP tip>
 <lead>Liens utiles</lead>
 
   * [[guidedemarragerapide|Guide de démarrage rapide : nouvelle version pour postgresql 9.4]]
-  * [[http://www.postgresql.org|Site officiel (en anglais)]] 
+  * [[http://www.postgresql.org|Site officiel (en anglais)]]
   * [[http://archives.postgresql.org/pgsql-fr-generale|Liste de discussion officielle en français]]
   * [[http://forum.postgresql.fr|Forums]] & [[http://docs.postgresql.fr|Documentation en français]]
   * [[temoignages:accueil|Témoignages de pros sur PostgreSQL]]
@@ -37,7 +39,9 @@
 <WRAP actu>
 <lead>Actualité</lead>
 {{rss>http://blog.postgresql.fr/index.php?feed/atom 6}}
+</WRAP>
 
+<WRAP agenda>
 <lead>Agenda</lead>
 
   * 04 octobre 2018: [[hhttps://www.meetup.com/PostgreSQL-User-Group-Nantes/events/254381460/|Meetup Nantes]]
@@ -52,7 +56,7 @@
 <WRAP planet>
 <lead>Planète</lead>
 
-{{rss>http://planete.postgresql.fr/atom.xml 4}} 
+{{rss>http://planete.postgresql.fr/atom.xml 4}}
 </WRAP>
 
 </WRAP>

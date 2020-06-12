@@ -25,19 +25,21 @@
  */
 
 .dokuwiki div.wrap_planet{ /* added */
-    padding: 1em 1em .5em 70px;
-    margin-bottom: 1.5em;
-    min-height: 68px;
-    background-position: 10px 50%;
-    background-repeat: no-repeat;
-    color: inherit;
-    overflow: hidden;
-    background-color: #B4C7D7;
-	background-image: url(/lib/plugins/note/images/planet.png)
+  padding: 1em 1em .5em 70px;
+  margin-bottom: 1.5em;
+  min-height: 68px;
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  overflow: hidden;
+  background-color: #B4C7D7;
+  background-image: url(/lib/plugins/note/images/planet.png);
+  background-color: #eef3ad; /* test */
 }
 
 .dokuwiki div.wrap_download {
     background-color: #74bec1;
+  background-color: #eef3ad; /* test */
 }
 
 .dokuwiki div.wrap_tip {
@@ -54,7 +56,8 @@
     overflow: hidden;
     background-color: #B4C7D7;
     background-color: #adebbe;
-	background-image: url(/lib/plugins/note/images/actu.png)
+  background-image: url(/lib/plugins/note/images/actu.png);
+  background-color: #eef3ad; /* test */
 }
 
 .dokuwiki div.wrap_meetup{
@@ -66,7 +69,8 @@
     color: inherit;
     overflow: hidden;
     background-color: #B4C7D7;
-	background-image: url(/lib/plugins/note/images/planet.png)
+	background-image: url(/lib/plugins/note/images/planet.png);
+  background-color: #eef3ad; /* test */
 }
 
 .dokuwiki div.wrap_agenda{
@@ -78,7 +82,8 @@
   color: inherit;
   overflow: hidden;
   background-color: #B4C7D7;
-  background-image: url(/lib/plugins/note/images/agenda.png)
+  background-image: url(/lib/plugins/note/images/agenda.png);
+  background-color: #eef3ad; /* test */
 }
 
 .dokuwiki .plugin_wrap h4 {
@@ -91,7 +96,8 @@
 
 
 body.readable .navbar-default {
-    background-color: #336791;
+  background-color: #336791;
+  color: whitesmoke;
 }
 
 body.readable ul.dropdown-menu {
@@ -115,8 +121,8 @@ body.readable ul.nav li.active a {
 }
 
 body.readable .navbar-brand {
-	color: whitesmoke !important;
-	text-transform: uppercase;
+  color: whitesmoke !important;
+  text-transform: uppercase;
 }
 
 body.readable a {
@@ -125,8 +131,12 @@ text-decoration: none;
 }
 
 body.readable footer {
-	background-color: #336791;
-    color: whitesmoke;
+  background-color: #336791;
+  color: whitesmoke;
+}
+
+body.readable footer a {
+  color: whitesmoke;
 }
 
 body.readable a.navbar-link {
