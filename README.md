@@ -3,6 +3,7 @@ Common Bootstrap Theme for the postgresql.fr platform
 
 ## Bases
 
+* [Jquery](https://jquery.com/download/) : version 3.4.1
 * [Bootstrap](https://getbootstrap.com/): version 3.4.1
 * [Bootswatch Theme Readable](https://bootswatch.com/3/readable/): version 3.4.1
 * [Dokuwiki Bootstrap Template](https://www.dokuwiki.org/template:bootstrap3): v2020-04-04 
