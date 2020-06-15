@@ -1,14 +1,9 @@
 
-#- name: Extract new
-#  unarchive:
-#    src: https://github.com/natrius/air3/archive/v0.8.zip
-#    dest: "{{ fluxbb_home }}"
-#    remote_src: yes
-
 - name: Deployer les fichiers statiques
   synchronize:
     src: "{{ item }}"
-    dest: "{{ fluxbb_home }}"
+    dest: "{{ fluxbb_root }}"
+    rsync_opts: "--chown=www-data.www-data"
   with_items:
      - "files/fluxbb/style"
      - "files/common/lib"
@@ -16,9 +11,7 @@
      - "files/common/images"
      - "files/dokuwiki/conf/userstyle.css"
 
-#FIXME: chown www-data
-
 - name: Deployer les templates
   template:
     src: 'templates/fluxbb/style/Postgresql/main.tpl'
-    dest: "{{ fluxbb_home }}/style/Postgresql/main.tpl"
+    dest: "{{ fluxbb_root }}/style/Postgresql/main.tpl"
