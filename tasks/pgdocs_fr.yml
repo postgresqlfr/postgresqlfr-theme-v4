@@ -1,12 +1,17 @@
 
 - name: Deployer le theme pgdocs_fr
-  copy:
+  synchronize:
     src: "{{ item.src }}"
     dest: "{{ pgdocs_fr_home }}/{{ item.dst }}"
-    owner: www-data
-    group: www-data
+    rsync_opts: "--chown=www-data.www-data"
   with_items:
+     - src: common/lib
+       dst:
+     - src: common/conf
+       dst:
      - src: pgdocs_fr/theme
        dst:
      - src: pgdocs_fr/index.php
+       dst:
+     - src: pgdocs_fr/index2.php
        dst:
