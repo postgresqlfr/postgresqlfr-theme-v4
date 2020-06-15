@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
+        <meta name="description" content="{{site.description}}"/>
+        <meta name="author" content="{{site.author}}"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.baseurl }}/feed.xml" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/local.css">
+{% include postgresqlfr-theme-v4/pgfr_header.html %}
+</head>
+
+    <body>
+{% include postgresqlfr-theme-v4/pgfr_navbar.html %}
+
+        <header>
+            <h1><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
+            <hr />
+        </header>
+
+        <main>
+
+            {{ content }}
+
+        </main>
+
+{% include postgresqlfr-theme-v4/pgfr_footer.html %}
+
+  </body>
+
+</html>

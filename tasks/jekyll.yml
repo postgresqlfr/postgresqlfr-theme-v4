@@ -1,0 +1,39 @@
+
+## /!\ Attention
+## Le themen'est pas déployé directement dans le vhost (jekyll_root)
+## On le déploie plutot dans le $HOME de l'utilisateur jekyll
+##
+
+- name: Deployer les fichiers statiques
+  synchronize:
+    src: "{{ item }}"
+    dest: "~{{ jekyll_owner }}/{{ jekyll_domain_name }}"
+    rsync_opts: "--chown=www-data.www-data"
+  with_items:
+     - "files/jekyll/_layouts"
+     - "files/common/lib"
+     - "files/common/images/favicon.ico"
+     - "files/common/images"
+     - "files/dokuwiki/conf/userstyle.css"
+
+- name: Le dossier de destination des inclusions doit exister
+  file:
+    path: "~{{ jekyll_owner }}/{{ jekyll_domain_name }}/_include/postgresqlfr-theme-v4"
+    state: directory
+    recurse: yes
+    owner: www-data
+    group: www-data
+
+- name: Deployer les templates dans le dossier d'inclusion
+  template:
+    src: "templates/common/{{ item }}.j2"
+    dest: "~{{ jekyll_owner }}/{{ jekyll_domain_name }}/_includes/postgresqlfr-theme-v4/{{ item }}"
+  with_items:
+    - pgfr_footer.html
+    - pgfr_header.html
+    - pgfr_navbar.html
+
+# should be an handler
+- name: rebuild the blog
+  become: true
+  shell: "/etc/cron.daily/{{ jekyll_domain_name }}"

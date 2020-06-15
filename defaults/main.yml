@@ -4,6 +4,7 @@
 ##
 jekyll_domain_name: testblog.postgresql.fr
 jekyll_root: /var/www/{{ jekyll_domain_name }}
+jekyll_owner: jekyll
 
 ##
 ## 2- doc
