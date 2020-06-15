@@ -2,8 +2,8 @@
 ##
 ## 1- blog
 ##
-
-# TODO
+jekyll_domain_name: testblog.postgresql.fr
+jekyll_root: /var/www/{{ jekyll_domain_name }}
 
 ##
 ## 2- doc
@@ -20,7 +20,7 @@ pgdocs_fr_home: /var/www/{{ pgdocs_fr_domain_name }}
 ## 4- forum
 ##
 fluxbb_domain_name: testforum.postgresql.fr
-fluxbb_home: /var/www/{{ fluxbb_domain_name }}
+fluxbb_root: /var/www/{{ fluxbb_domain_name }}
 
 ##
 ## 5- planete
