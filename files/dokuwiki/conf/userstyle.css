@@ -1,3 +1,13 @@
+/*
+ * Common
+ * FIXME this should be in a common CSS file
+ *
+ */
+
+/* FIX: https://github.com/postgresqlfr/postgresqlfr-theme-v4/issues/7 */
+.navbar-nav>li>a {
+    margin: 12.5px 0px;
+}
 
 /*
  * Dokuwiki
