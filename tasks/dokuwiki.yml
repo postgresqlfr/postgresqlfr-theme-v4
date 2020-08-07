@@ -11,3 +11,10 @@
     dest: "{{ dokuwiki_home }}/conf/local.php"
     backup: yes
     #validate: FIXME
+
+- name: Activer la customisation CSS
+  copy:
+    src: dokuwiki/conf/userstyle.css
+    dest: "{{ dokuwiki_home }}/conf/"
+    owner: www-data
+    group: www-data

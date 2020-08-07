@@ -1,0 +1,76 @@
+
+/*
+ * En attendant la v4
+ */
+
+.lead {
+  font-size: x-large;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Plugin Wrap
+ */
+
+.dokuwiki div.wrap_planet{ /* added */
+  padding: 1em 1em .5em 70px;
+  margin-bottom: 1.5em;
+  min-height: 68px;
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  overflow: hidden;
+  background-image: url(/lib/plugins/note/images/planet.png);
+  background-color: #ddddff; /* test */
+}
+
+.dokuwiki div.wrap_download {
+  background-color: #ddddff; /* test */
+}
+
+.dokuwiki div.wrap_tip {
+    background-color: #ddddff;
+}
+
+.dokuwiki div.wrap_actu{
+  padding: 1em 1em .5em 70px;
+  margin-bottom: 1.5em;
+  min-height: 68px;
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  overflow: hidden;
+  background-image: url(/lib/plugins/note/images/actu.png);
+  background-color: #ddddff; /* test */
+}
+
+.dokuwiki div.wrap_meetup{
+  padding: 1em 1em .5em 70px;
+  margin-bottom: 1.5em;
+  min-height: 68px;
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  overflow: hidden;
+  background-image: url(/lib/plugins/note/images/planet.png);
+  background-color: #ddddff; /* test */
+}
+
+.dokuwiki div.wrap_agenda{
+  padding: 1em 1em .5em 70px;
+  margin-bottom: 1.5em;
+  min-height: 68px;
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  color: inherit;
+  overflow: hidden;
+  background-image: url(/lib/plugins/note/images/agenda.png);
+  background-color: #ddddff; /* test */
+}
+
+.dokuwiki .plugin_wrap h4 {
+  border-bottom: 1px solid #dddddd;
+}
+
+
+
