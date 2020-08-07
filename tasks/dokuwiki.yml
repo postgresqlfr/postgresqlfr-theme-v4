@@ -33,7 +33,6 @@
   with_items:
     - data/pages/navbar.txt
     - data/pages/footer.txt
-    - data/pages/accueil.txt # FIXME: a supprimer après la migration
 
 - name: Install the media
   copy:
