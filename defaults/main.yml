@@ -37,6 +37,6 @@ dokuwiki_home: /var/www/{{ dokuwiki_domain_name }}
 
 dokuwiki_template: bootstrap3
 dokuwiki_template_repo: https://github.com/giterlizzi/dokuwiki-template-bootstrap3
-dokuwiki_template_version: v2020-04-04
+dokuwiki_template_version: v2020-07-29
 
 
