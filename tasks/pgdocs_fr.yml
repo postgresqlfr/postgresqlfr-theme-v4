@@ -1,17 +1,24 @@
 
-- name: Deployer le theme pgdocs_fr
+- name: Deployer les fichiers statiques
   synchronize:
-    src: "{{ item.src }}"
-    dest: "{{ pgdocs_fr_home }}/{{ item.dst }}"
+    src: "{{ item }}"
+    dest: "{{ pgdocs_fr_home }}"
     rsync_opts: "--chown=www-data.www-data"
   with_items:
-     - src: common/lib
-       dst:
-     - src: common/conf
-       dst:
-     - src: pgdocs_fr/theme
-       dst:
-     - src: pgdocs_fr/index.php
-       dst:
-     - src: pgdocs_fr/index2.php
-       dst:
+     - "files/pgdocs_fr/css"       # FIXME: désactivation du theme v3
+     - "files/pgdocs_fr/index.php" # FIXME: pousser les modifs upstream !!!
+     - "files/pgdocs_fr/search.php" # FIXME: pousser les modifs upstream !!!
+     - "files/common/lib"
+     - "files/common/images/favicon.ico"
+     - "files/common/images"
+     - "files/common/conf/userstyle.css"
+
+- name: Deployer les templates dans le dossier d'inclusion
+  template:
+    src: "templates/common/{{ item }}.j2"
+    dest: "{{ pgdocs_fr_home }}/common/{{ item }}"
+  with_items:
+    - pgfr_footer.html
+    - pgfr_header.html
+    - pgfr_navbar.html
+    - pgfr_google_analytics.html

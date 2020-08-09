@@ -40,6 +40,7 @@ $version['120'] = '12';
 		<title>Documentation PostgreSQL en français</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<link rel="shortcut icon" href="/favicon.ico" />
+    <?php include('common/pgfr_header.html'); ?>
 		<link rel="stylesheet" href="css/style.css" type="text/css" title="Test" />
 		<script type="text/javascript">
 		<!--
@@ -61,38 +62,11 @@ $version['120'] = '12';
 		  }
 		}
 		//-->
-		</script>		
+		</script>
 	</head>
-	<body>
-<div id="top">
-  <div id="pgHeader">
-    <span id="pgHeaderLogoLeft">
-      <a href="/" title="PostgreSQL"><img src="http://www.postgresql.fr/lib/tpl/tortoise/images/hdr_left.png" width="230" height="80" alt="PostgreSQL" /></a>
-    </span>
-    <span id="pgHeaderLogoRight">
-      <a href="/" title="La base de donnees la plus sophistiquee au monde."><img src="http://www.postgresql.fr/lib/tpl/tortoise/images/hdr_right.png" width="210" height="80" alt="La base de donnees la plus sophistiquee au monde." /></a>
-    </span>
-  </div>
-</div>
+	<body class="readable">
+<?php include('common/pgfr_navbar.html'); ?>
 
-<div class="pgTopNav">
-  <div class="pgTopNavLeft"> 
-    <img src="http://www.postgresql.fr/lib/tpl/tortoise/images/nav_lft.png" width="7" height="23" alt="" />
-  </div>
-  <div class="pgTopNavRight">
-    <img src="http://www.postgresql.fr/lib/tpl/tortoise/images/nav_rgt.png" width="7" height="23" alt="" />
-  </div>
-  <ul class="pgTopNavList">
-    <li><a href="http://www.postgresql.fr/" title="Accueil">Accueil</a></li>
-    <li><a href="http://blog.postgresql.fr/" title="Lire les actualités">Actualités</a></li>
-    <li><a href="http://docs.postgresql.fr/" title="Lire la documentation officielle">Documentation</a></li>
-    <li><a href="http://forums.postgresql.fr/" title="Pour poser des questions">Forums</a></li>
-    <li><a href="http://asso.postgresql.fr/" title="La vie de l'association">Association</a></li>
-    <li><a href="http://trac.postgresql.fr" title="Trac des développeurs">Développeurs</a></li>
-    <li><a href="http://planete.postgresql.fr" title="La planète francophone sur PostgreSQL">Planète</a></li>
-    <li><a href="http://support.postgresql.fr" title="Support sur PostgreSQL">Support</a></li>
-  </ul>
-</div>
 <div id="pgContent">
 
   <div id="pgSideWrap">
@@ -265,17 +239,7 @@ pg_close($pgconn);
 
 	</div>
 	</div>
+<?php include('common/pgfr_footer.html'); ?>
   </body>
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ?
-  "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost +
-  "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-   var pageTracker = _gat._getTracker("UA-140513-1");
-   pageTracker._addOrganic("pgfrsearch", "q");
-   pageTracker._initData();
-   pageTracker._trackPageview();
-</script>
+<?php include('common/pgfr_google_analytics.html'); ?>
 </html>
