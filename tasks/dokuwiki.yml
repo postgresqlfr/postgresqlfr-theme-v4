@@ -47,7 +47,7 @@
 
 - name: Activer la customisation CSS
   copy:
-    src: dokuwiki/conf/userstyle.css
+    src: common/conf/userstyle.css
     dest: "{{ dokuwiki_home }}/conf/"
     owner: www-data
     group: www-data
