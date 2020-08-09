@@ -9,7 +9,7 @@
      - "files/common/lib"
      - "files/common/images/favicon.ico"
      - "files/common/images"
-     - "files/dokuwiki/conf/userstyle.css"
+     - "files/common/conf/userstyle.css"
 
 - name: Deployer les templates
   template:
