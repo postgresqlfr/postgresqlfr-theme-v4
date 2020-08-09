@@ -1,14 +1,24 @@
 
-- name: Deployer le theme planetplanet
-  copy:
-    src: "{{ item.src }}"
-    dest: "{{ planetplanet_home }}/{{ item.dst }}"
-    owner: www-data
-    group: www-data
+- name: Deployer les fichiers statiques
+  synchronize:
+    src: "{{ item }}"
+    dest: "{{ planetplanet_home }}"
+    rsync_opts: "--chown=www-data.www-data"
   with_items:
-     - src: "planetplanet/theme"
-       dst: "theme"
-     - src: planetplanet/favicon.ico
-       dst: favicon.ico
-     - src: planetplanet/pgfr/index.html.tmpl
-       dst: pgfr/
+     #- "files/fluxbb/style"
+     - "files/common/lib"
+     - "files/common/images/favicon.ico"
+     - "files/common/images"
+     - "files/common/conf/userstyle.css"
+
+- name: Deployer les templates
+  template:
+    src: 'templates/planetplanet/pgfr/index.html.tmpl.j2'
+    dest: "{{ planetplanet_home }}/pgfr/index.html.tmpl"
+
+# should be an handler
+#- name: Refresh
+#  become_user: www-data
+#  shell: python planet.py pgfr/config.ini
+#  args:
+#    chdir: "{{ planetplanet_home }}"
