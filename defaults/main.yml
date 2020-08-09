@@ -1,20 +1,20 @@
 
 # base directory for the theme
 base_dir: ./postgresqlfr-theme
-common_dir: {{ base_dir }}/common
+common_dir: "{{ base_dir }}/common"
 
 ##
 ## 1- blog
 ##
 jekyll_domain_name: testblog.postgresql.fr
-jekyll_root: /var/www/{{ jekyll_domain_name }}
+jekyll_root: "/var/www/{{ jekyll_domain_name }}"
 jekyll_owner: jekyll
 
 ##
 ## 2- doc
 ##
 pgdocs_fr_domain_name: testdoc.postgresql.fr
-pgdocs_fr_home: /var/www/{{ pgdocs_fr_domain_name }}
+pgdocs_fr_home: "/var/www/{{ pgdocs_fr_domain_name }}"
 pgdocs_fr_ga_tracking_id: UA-140513-1
 
 ##
@@ -26,20 +26,20 @@ pgdocs_fr_ga_tracking_id: UA-140513-1
 ## 4- forum
 ##
 fluxbb_domain_name: testforum.postgresql.fr
-fluxbb_root: /var/www/{{ fluxbb_domain_name }}
+fluxbb_root: "/var/www/{{ fluxbb_domain_name }}"
 
 ##
 ## 5- planete
 ##
 planetplanet_domain_name: testplanete.postgresql.fr
-planetplanet_home: /var/www/{{ planetplanet_domain_name }}
+planetplanet_home: "/var/www/{{ planetplanet_domain_name }}"
 planetplanet_ga_tracking_id: UA-3921927-5
 
 ##
 ## 6- www
 ##
 dokuwiki_domain_name: testwww.postgresql.fr
-dokuwiki_home: /var/www/{{ dokuwiki_domain_name }}
+dokuwiki_home: "/var/www/{{ dokuwiki_domain_name }}"
 
 dokuwiki_template: bootstrap3
 dokuwiki_template_repo: https://github.com/giterlizzi/dokuwiki-template-bootstrap3
