@@ -1,4 +1,8 @@
 
+# base directory for the theme
+base_dir: ./postgresqlfr-theme
+common_dir: {{ base_dir }}/common
+
 ##
 ## 1- blog
 ##
@@ -11,6 +15,7 @@ jekyll_owner: jekyll
 ##
 pgdocs_fr_domain_name: testdoc.postgresql.fr
 pgdocs_fr_home: /var/www/{{ pgdocs_fr_domain_name }}
+pgdocs_fr_ga_tracking_id: UA-140513-1
 
 ##
 ## 3- erp
