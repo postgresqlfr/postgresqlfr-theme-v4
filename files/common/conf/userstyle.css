@@ -4,17 +4,18 @@
  */
 /* FIX: https://github.com/postgresqlfr/postgresqlfr-theme-v4/issues/7 */
 .navbar-nav>li>a {
-    margin: 12.5px 0px;
+  margin: 12.5px 0px;
 }
 
-header {
+.titre_principal {
   margin-top: 6rem; /* hauteur standard de la barre de navigation */
 }
 
 .ligne_principale {
   margin-top: 6rem; /* hauteur standard de la barre de navigation */
-  margin-left: 2rem;
+/*  margin-left: 2rem;
   margin-right: 3rem;
+*/
 }
 
 .ligne_principale img {
@@ -158,6 +159,13 @@ body.readable ul.nav li a.login {
   color: #336791 !important;
 }
 
+body.readable footer a {
+  color: whitesmoke;
+}
+
+body.readable header a {
+  color: whitesmoke;
+}
 
 /*
  *  Bootswatch - flatly
