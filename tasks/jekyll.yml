@@ -14,7 +14,7 @@
      - "files/common/lib"
      - "files/common/images/favicon.ico"
      - "files/common/images"
-     - "files/dokuwiki/conf/userstyle.css"
+     - "files/common/conf/userstyle.css"
 
 - name: Le dossier de destination des inclusions doit exister
   file:
@@ -33,7 +33,3 @@
     - pgfr_header.html
     - pgfr_navbar.html
 
-# should be an handler
-- name: rebuild the blog
-  become: true
-  shell: "/etc/cron.daily/{{ jekyll_domain_name }}"

@@ -10,22 +10,22 @@
 {% include postgresqlfr-theme-v4/pgfr_header.html %}
 </head>
 
-    <body>
+<body class="readable">
 {% include postgresqlfr-theme-v4/pgfr_navbar.html %}
 
-        <header>
-            <h1><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
-            <hr />
-        </header>
+<header>
+<h1><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
+<hr />
+</header>
 
-        <main>
+<main>
 
-            {{ content }}
+{{ content }}
 
-        </main>
+</main>
 
 {% include postgresqlfr-theme-v4/pgfr_footer.html %}
 
-  </body>
-
+</body>
+{# FIXME include GA tracker#}
 </html>
