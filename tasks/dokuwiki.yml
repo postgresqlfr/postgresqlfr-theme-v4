@@ -16,14 +16,14 @@
 
 # TODO: installer les plugins: icon, bootswatch
 
-#- name: Install the navbar
-#  template:
-#    src: dokuwiki/data/pages/navbar.txt.j2
-#    dest: "{{ dokuwiki_home }}/data/pages/navbar.txt"
-#    owner: www-data
-#    group: www-data
+- name: Install the navbar
+  template:
+    src: dokuwiki/data/pages/navbar.txt.j2
+    dest: "{{ dokuwiki_home }}/data/pages/navbar.txt"
+    owner: www-data
+    group: www-data
 
-- name: Install the pages
+- name: Install the static pages
   copy:
     src: "dokuwiki/{{ item }}"
     dest: "{{ dokuwiki_home }}/{{ item }}"
@@ -31,7 +31,7 @@
     group: www-data
     mode: 0600  # FIXME repasser à 400 pour empêcher les gens de modifier la navigation :)
   with_items:
-    - data/pages/navbar.txt
+#    - data/pages/navbar.txt
     - data/pages/footer.txt
 
 - name: Install the media
