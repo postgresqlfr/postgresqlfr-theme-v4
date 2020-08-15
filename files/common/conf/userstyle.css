@@ -223,17 +223,23 @@ body.flatly ul.nav li a.login {
  * FluxBB
  */
 
+/* Cacher le titre qui est redondant avec la description (bdrdesc) */
+nav.primary h1 {
+  display: none;
+}
+
+/* description du forum */
 #brddesc {
   border-top-style: dotted;
   border-top-width: 0px;
-  padding: 10px 0 0;
+  padding: 0px;
   font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: bold;
   line-height: 1.1;
   color: inherit;
   font-size: 1.8em;
   text-align: center;
-  margin-top: 1em;
+  margin-top: 3em;
   margin-bottom: 1em;
 }
 
